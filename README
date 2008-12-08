@@ -1,7 +1,30 @@
-== Ticketing System
+FBCONNECT_ROR
+Open source Facebook Connect and Rails integration example app.
 
-This is my ticketing system.
-
-== Author
-
+OVERSEER:
 * Dan Newman
+
+Contributors:
+....
+
+GOALS:
+Create a rails base app that supports Facebook Connect. 
+Facebook Connect is an important technology. There needs to be a simple Rails example that is complete, yet as simple as possible providing a good start point for developers wanting to add Facebook Connect capacity quickly. 
+A base app would allow one to see the whole working process, and work off of a functioning app.
+
+REQUIREMENTS:
+1) Ability to logon and logout using FB Connect.
+2) Display of data from user's facebook profile, and XFBML content.
+3) Ability to publish content to feeds.
+
+DEPENDENCIES: 
+Facebooker plugin
+MySQL
+
+IMPORTANT URLS:
+http://wiki.developers.facebook.com/index.php/Facebook_Connect # fb docs
+http://wiki.developers.facebook.com/index.php/Trying_Out_Facebook_Connect # fb connect config in short
+http://www.somethingtoputhere.com/therunaround/ # example app online
+http://facebooker.rubyforge.org/ # facebooker
+
+
