@@ -5,7 +5,7 @@ class FbController < ApplicationController
 
       # authenticate
 
-      # @user = session[:facebook_session].user 
+      @user = session[:facebook_session].user 
 
       # @friends = @user.friends
 
