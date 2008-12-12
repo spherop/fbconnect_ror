@@ -1,21 +1,20 @@
 FBCONNECT_ROR
-Open source Facebook Connect and Rails integration example app.
-
-OVERSEER:
-* Dan Newman
+Open source Facebook Connect and Rails integration 'base app'.
 
 Contributors:
-....
+ZHAO LU
+BOSCO SO
+DAN NEWMAN
 
 GOALS:
-Create a rails base app that supports Facebook Connect. 
-Facebook Connect is an important technology. There needs to be a simple Rails example that is complete, yet as simple as possible providing a good start point for developers wanting to add Facebook Connect capacity quickly. 
-A base app would allow one to see the whole working process, and work off of a functioning app.
+Create a rails 'base app' that implements Facebook Connect. 
+Facebook Connect is an important technology that the Rails community should have easy access to implementing. We need a Rails example that is complete, yet simple, providing a good start point for developers wanting to add Facebook Connect capacity quickly to their project. 
 
-REQUIREMENTS:
-1) Ability to logon and logout using FB Connect.
+CURRENT REQUIREMENTS: (these are amendable, and malleable, open to modification)
+1) Ability to logon and logout of site using FB Connect.
 2) Display of data from user's facebook profile, and XFBML content.
 3) Ability to publish content to feeds.
+4) Tie Facebook user_id to Application user_id
 
 DEPENDENCIES: 
 Facebooker plugin

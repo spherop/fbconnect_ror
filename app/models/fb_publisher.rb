@@ -19,7 +19,7 @@ class FBPublisher < Facebooker::Rails::Publisher
        #  Registering the template will store the template id returned from Facebook in the
        # facebook_templates table that is created when you create your first publisher
        def publish_action_template
-         one_line_story_template "{*actor*} knows and cannot believe the principles and foundational aspect of {*friend*}"
+         one_line_story_template "{*actor*} communicated with {*friend*}"
          one_line_story_template "{*actor*} did stuff"
          short_story_template "{*actor*} has a title {*friend*}", render(:partial=>"short_body")
          short_story_template "{*actor*} has a title", render(:partial=>"short_body")
