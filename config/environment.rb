@@ -65,3 +65,31 @@ Rails::Initializer.run do |config|
   # Activate observers that should always be running
   # config.active_record.observers = :cacher, :garbage_collector
 end
+  ENV['XD_RECEIVER_LOCATION'] = "/connect/xd_receiver.htm"
+  ENV['FACEBOOK_AUTHENTICATE_LOCATION'] = "/fb/authenticate"
+  #the js redirects to this url when signed in, it must set up the facebook session
+  ENV['FACEBOOK_SIGNED_IN_URL'] = "/fb/authenticate"
+  module Facebooker
+    class Service   
+      def post_with_api_logging(params)  
+        unless(RAILS_ENV == "production")
+          RAILS_DEFAULT_LOGGER.debug(" Posting to #{url} #{params.inspect} ")
+        end
+        return post_without_api_logging(params)     
+      end
+      alias_method_chain :post, :api_logging
+    end
+
+    class Parser
+      class <<self
+
+        def parse_with_logging(api_method,response)
+          unless(RAILS_ENV == "production")
+            RAILS_DEFAULT_LOGGER.debug(" Return value #{response.body}")
+          end
+          return parse_without_logging(api_method, response)     
+        end
+        alias_method_chain :parse, :logging
+      end
+    end
+end

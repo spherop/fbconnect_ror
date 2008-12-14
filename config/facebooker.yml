@@ -10,7 +10,7 @@ development:
   api_key: d7f722455ec3043435464ea6a9ece0bf
   secret_key: fd5ca3f207af4ce4c62ed521172954df
   canvas_page_name: fbconnect_ror
-  callback_url: http://localhost:3000/
+  callback_url: http://localhost:3000
   pretty_errors: true
   tunnel:
     public_host_username: 

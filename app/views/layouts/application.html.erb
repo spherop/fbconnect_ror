@@ -1,0 +1,38 @@
+	<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+	"http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+<title>fbconnect ror</title>
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.6.0/build/reset-fonts-grids/reset-fonts-grids.css">
+
+<%= stylesheet_link_tag 'style' %> 
+
+<%= javascript_include_tag "application" %>
+<%= javascript_include_tag "http://static.ak.connect.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php" %>
+
+
+</head>
+<body>
+	
+	<div id="doc3">
+	   <div id="hd"><!-- header -->
+		<fb:login-button   background="light" autologoutlink="true" onlogin="facebook_button_onclick()"></fb:login-button> 	
+
+	
+	</div>
+	   <div id="bd"><!-- body -->
+		<div id="container">
+		<%= yield %> 
+		</div>
+		</div> 
+	   <div id="ft" class="color_scheme_3 text_center padding_10"><!-- footer -->
+	
+		</div>
+	</div>
+	<%= javascript_tag "window.api_key = '#{Facebooker.api_key}';" %>
+	<%= javascript_tag "window.xd_receiver_location = '#{ENV['XD_RECEIVER_LOCATION']}';" %>
+	<%= javascript_tag "window.facebook_authenticate_location = '#{ENV['FACEBOOK_AUTHENTICATE_LOCATION']}';" %>
+	<%= javascript_tag "window.facebook_signed_in_url = '#{ENV['FACEBOOK_SIGNED_IN_URL']}';" %>
+    <%= javascript_include_tag "facebook_require" %>
+</body>
+</html>
